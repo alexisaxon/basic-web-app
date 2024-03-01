@@ -20,13 +20,14 @@ export default function QueryProcessor(query: string): string {
     return ("" + answer)
   }
   const regex1 = /Which of the following numbers is the largest: (\d+), (\d+), (\d+)\?/i;
-  const match1 = query.match(regex);
+  const match1 = query.match(regex1);
   
   if (match1) {
     // Extract the numbers from the matched groups
     const x = parseInt(match1[1]);
     const y = parseInt(match1[2]);
     const z = parseInt(match1[3]);
+
     return ("" + Math.max(x,y,z))
   }
 
