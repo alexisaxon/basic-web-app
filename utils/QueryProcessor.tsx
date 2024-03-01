@@ -32,7 +32,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   const regex2 = /What is (\d+) multiplied by (\d+)\?/i;
-  const match2 = query.match(regex1);
+  const match2 = query.match(regex2);
   
   if (match2) {
     // Extract the numbers from the matched groups
