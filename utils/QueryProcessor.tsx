@@ -9,6 +9,15 @@ export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("your name")) {
     return ("Alexis")
   }
+  const regex = /What is (\d+) plus (\d+)\?/i;
+  const match = query.match(regex);
+  
+  if (match) {
+    // Extract the numbers from the matched groups
+    const x = parseInt(match[1]);
+    const y = parseInt(match[2]);
+    return ("" + x+y)
+  }
 
   return "";
 }
