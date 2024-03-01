@@ -31,5 +31,17 @@ export default function QueryProcessor(query: string): string {
     return ("" + Math.max(x,y,z))
   }
 
+  const regex2 = /What is (\d+) multiplied by (\d+)\?/i;
+  const match2 = query.match(regex1);
+  
+  if (match2) {
+    // Extract the numbers from the matched groups
+    const x = parseInt(match2[1]);
+    const y = parseInt(match2[2]);
+    const an = x*y;
+
+    return ("" + an)
+  }
+
   return "";
 }
