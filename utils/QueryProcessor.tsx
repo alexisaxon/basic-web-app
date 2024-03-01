@@ -16,7 +16,8 @@ export default function QueryProcessor(query: string): string {
     // Extract the numbers from the matched groups
     const x = parseInt(match[1]);
     const y = parseInt(match[2]);
-    return ("" + x+y)
+    const answer = x+y
+    return ("" + answer)
   }
   const regex1 = /Which of the following numbers is the largest: (\d+), (\d+), (\d+)\?/i;
   const match1 = query.match(regex);
